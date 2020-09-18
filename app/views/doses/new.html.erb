@@ -1,0 +1,8 @@
+
+
+
+<%= simple_form_for [ @cocktail, @dose ] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, as: :radio_buttons, collection: @ingre %>
+  <%= f.submit "Submit dose", class: "btn btn-primary" %>
+<% end %>
