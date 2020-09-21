@@ -8,7 +8,7 @@
 
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image:url(<%= asset_path "wood" %>)">
+  <div class="card-category" style="background-image:url(<%= asset_path "wood"  %>)">
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
   </div>
 <% end %>
@@ -17,21 +17,12 @@
 ####
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image:url(<%= asset_path "#{cocktail.name}.jpg" %>)">
+  <div class="card-category" style="background-image:url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
   </div>
 <% end %>
 </div>
 
-####
 
-Mojiiiiito
-Cuba free
-Tijuana
-New cocktail
-New cocktail 2
-teste 3
-teste 4
 
-<%= link_to "New cocktail", new_cocktail_path %>
-<img src="<%= asset_path "Cuba free" %>" alt="">
+<%= link_to "New cocktail", new_cocktail_path, :class => "btn btn-gradient mx-2" %>
