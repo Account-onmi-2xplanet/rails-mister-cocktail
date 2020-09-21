@@ -29,6 +29,7 @@
   @media (min-width: 992px) {
     .cards {
       grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px 10px;
     }
   }
   
@@ -49,5 +50,19 @@
       align-items: center;
       font-size: 24px;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      height: 100px;
+
+      a { 
+        border-radius: 30px;
+        color:whitesmoke;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        color: rgb(98, 80, 80);
+        text-decoration: none;
+        background-color: whitesmoke;
+        opacity: 0.3;
+      }
 
   }

@@ -20,7 +20,23 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>-->
     </nav>
+
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path "banner" %>);">
+      <div class="container">
+        <h1>Le Wagon brings <strong>Alcohol</strong> to <strong>creative people</strong>!</h1>
+        <p><%= @phrases %></p>
+      </div>
+    </div>
     <%= yield %>
+    <div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/Account-onmi-2xplanet"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/bruno-parente-norberto/"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+   Eat, drink and <i class="fas fa-heart"></i> ...the rest is not worth a nickel.
+  </div>
+</div>
 
   </body>
 </html>
