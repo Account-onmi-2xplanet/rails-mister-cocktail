@@ -6,15 +6,9 @@
   <% end %>
 </ul>-->
 
-<!--<div class="cards">
-<% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image:url(<%= asset_path "wood"  %>)">
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  </div>
-<% end %>
-</div>-->
 
-####
+
+
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
   <div class="card-category" style="background-image:url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
